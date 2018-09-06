@@ -1,15 +1,23 @@
-body {
-    display: flex;
+/* Global Layout Set-up */
+* {
+    box-sizing: border-box;
+  }
+
+body {;
     background-color: wheat;
     
 }
-.logo {
-    justify-content: center;
-    text-align: center;
-    font-size: 200px;
-    /* border: 1px black solid; */
-}
 
+
+.logo {
+    /* text-align: center; */
+    font-size: 300%;
+    border: 1px black solid;
+}
+ h1 {
+     text-align: center;
+     justify-content: center;
+ }
 /* .logo2 {
     text-align: center;
     font-size: 200px;
