@@ -1,3 +1,17 @@
 body {
+    display: flex;
     background-color: wheat;
+    
 }
+.logo {
+    justify-content: center;
+    text-align: center;
+    font-size: 200px;
+    /* border: 1px black solid; */
+}
+
+/* .logo2 {
+    text-align: center;
+    font-size: 200px;
+    padding-top: 50px;
+} */
