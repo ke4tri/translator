@@ -3,9 +3,10 @@
     box-sizing: border-box;
   }
 
-body {;
+body {
+    display:flex;
     background-color: wheat;
-    
+    flex-direction: column;
 }
 
 
@@ -13,13 +14,35 @@ body {;
     /* text-align: center; */
     font-size: 300%;
     border: 1px black solid;
+
 }
  h1 {
      text-align: center;
-     justify-content: center;
+     /* justify-content: center; */   
  }
-/* .logo2 {
+
+ ::placeholder {
+     text-align: center;
+ }
+ .text {
+    
+}
+ .inText {
+    margin-top: 5px;
+    justify-content: center;
+ }
+
+ .dom {
+     justify-content: center;
+    border: 1px black solid;
+    margin-top: 5px;
+ }
+.instruction {
+    border: 1px black solid;  
     text-align: center;
-    font-size: 200px;
-    padding-top: 50px;
-} */
+    margin: 5px, 5px, 5px, 5px;
+    padding: 5px;
+}
+
+
+
