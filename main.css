@@ -1,3 +1,25 @@
-body {
+/* Global Layout Set-up */
+* {
+    box-sizing: border-box;
+  }
+
+body {;
     background-color: wheat;
+    
 }
+
+
+.logo {
+    /* text-align: center; */
+    font-size: 300%;
+    border: 1px black solid;
+}
+ h1 {
+     text-align: center;
+     justify-content: center;
+ }
+/* .logo2 {
+    text-align: center;
+    font-size: 200px;
+    padding-top: 50px;
+} */
