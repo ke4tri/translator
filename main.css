@@ -46,7 +46,7 @@ div {
         display: flex;
         flex-direction: column;
 }
-    .inText {
+    .inText1 {
         border: 1px black solid; 
         justify-content: center;
         /* margin-top: 5px; */
@@ -74,3 +74,7 @@ div {
     b3{
         justify-content:center;
     }
+#print_dom{
+margin-top: 25px;
+margin-bottom: 25px;
+}
