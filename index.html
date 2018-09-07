@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <title>Etalsnart</title>
 </head>
@@ -12,6 +14,7 @@
     <div class="logo">
         <h1>ETALSNART</h1>    
     </div> 
+    
     <div class="para">
         <p class="instruction">Use the words below to construct your favorite chirstmas
              card sayings and have it translated in
@@ -19,14 +22,33 @@
                 Christmas, Merry, Happy, Santa, New, Year, Snow, Have, A, Tree.
         </p>
     </div>
-    <div class="text">
-        <input class="inText" type="text" class="form-control" placeholder="Type Here" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-    </div>
-    <div class="text">
-         <input class="dom"type="text" class="form-control" placeholder="Will Display Here" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-       
-        </div>
     
-    <script src="main.js"></script>
+    <div class="text">
+        <!-- not sure if the below can have a class and an id, will check -->
+         <input  id="inText" class="inText1" type="text" placeholder="Type your greeting here!">
+
+        <!-- <input class="inText1" id="inText" type="text" class="form-control" placeholder="Your text here"> -->
+        <!-- Below is where the dom WAS going to print, inside of an input field -->
+        <!-- <input class="dom"type="text" class="form-control" placeholder="Will Display Here" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"> -->
+        <!-- <p id="print_dom" aria-placeholder="DOM will pring here" ></p> -->
+
+    </div> 
+    
+    <div class="text" id="dom">
+            <p></p>
+    </div>    
+    
+    <div class="button">
+            <button id="SPANISH" type="button" class="btn btn-secondary btn-lg b1">SPANISH</button>
+            <!-- <button type="button" class="btn btn-secondary btn-lg b1" onclick="translate">SPANISH</button> -->
+            <button type="button" class="btn btn-secondary btn-lg b2" onclick="translate">FRENCH</button>
+            <button type="button" class="btn btn-secondary btn-lg b3" onclick="translate">ITALIAN </button>
+    </div>
+
+    
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>   -->
 </body>
 </html>

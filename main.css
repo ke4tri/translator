@@ -1,48 +1,80 @@
 /* Global Layout Set-up */
-* {
+/* * {
     box-sizing: border-box;
-  }
+  } */
 
 body {
     display:flex;
     background-color: wheat;
     flex-direction: column;
+    
+   
+   
 }
-
+div {
+    justify-content: center;
+}
 
 .logo {
     /* text-align: center; */
     font-size: 300%;
     border: 1px black solid;
+    text-align: center;
 
 }
- h1 {
-     text-align: center;
-     /* justify-content: center; */   
- }
+.para {
+    justify-content: center;
+}
+
+    h1 {
+        text-align: center;
+
+         
+    }
 
  ::placeholder {
      text-align: center;
  }
+
+    .instruction {
+        border: 1px black solid;  
+        /* text-align: center; */
+        /* margin: 5px, 5px, 5px, 5px; */
+        /* padding: 5px; */
+    }
  .text {
+        display: flex;
+        flex-direction: column;
+}
+    .inText1 {
+        border: 1px black solid; 
+        justify-content: center;
+        /* margin-top: 5px; */
+
+    }
+
+    .dom {
+        justify-content: center;
+        
+        border: 1px black solid;
+        /* margin-top: 5px; */
+    }
+
+.button {
+    border: 1px black solid; 
+    display: flex;
     
 }
- .inText {
-    margin-top: 5px;
-    justify-content: center;
- }
-
- .dom {
-     justify-content: center;
-    border: 1px black solid;
-    margin-top: 5px;
- }
-.instruction {
-    border: 1px black solid;  
-    text-align: center;
-    margin: 5px, 5px, 5px, 5px;
-    padding: 5px;
+    b1{
+        justify-content:center;
+    }
+    b2{
+        justify-content:center;
+    }
+    b3{
+        justify-content:center;
+    }
+#print_dom{
+margin-top: 25px;
+margin-bottom: 25px;
 }
-
-
-
