@@ -7,9 +7,6 @@ body {
     display:flex;
     background-color: wheat;
     flex-direction: column;
-    
-   
-   
 }
 div {
     justify-content: center;
@@ -17,19 +14,22 @@ div {
 
 .logo {
     /* text-align: center; */
-    font-size: 300%;
+    /* font-size: 500px; */
     border: 1px black solid;
     text-align: center;
-
+    
 }
 .para {
     justify-content: center;
 }
+    p {
+        font-size: 200%;
+        text-align: center;
+    }
 
     h1 {
-        text-align: center;
-
-         
+        text-align: center;    
+        font-size: 800%;
     }
 
  ::placeholder {
@@ -49,8 +49,8 @@ div {
     .inText1 {
         border: 1px black solid; 
         justify-content: center;
+        height: 100px;
         /* margin-top: 5px; */
-
     }
 
     .dom {
@@ -63,7 +63,6 @@ div {
 .button {
     border: 1px black solid; 
     display: flex;
-    
 }
     b1{
         justify-content:center;
@@ -74,6 +73,13 @@ div {
     b3{
         justify-content:center;
     }
+ 
+input[type="text"] {
+    text-align:center;
+    font-family: monospace;
+    font-size: 50px;
+    color: peru;
+    }   
 #print_dom{
 margin-top: 25px;
 margin-bottom: 25px;
