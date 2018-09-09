@@ -3,14 +3,8 @@ const printToDom = (stringToPrint, divId) => {
     selectedDiv.innerHTML += stringToPrint;
 };
 
-// was going to use this as a way to change the color of ART but cannot put it in its on class this way
-// let concat_word = (word1,word2) => {
-//     let word3 = `${word1}+${word2}`;
-//     return word3
-// };
-
 const words = {
-    spanish : [
+    spanish : 
     {
     "merry":"alegre",
     "christmas":"navida",
@@ -21,9 +15,9 @@ const words = {
     "good":"bueno",
     "lord":"dio",
     "snow":"nieve",
-    }
-    ],
-    french : [
+    },
+
+    french :
     {
     "merry":"joyeux",
     "christmas":"noel",
@@ -34,9 +28,9 @@ const words = {
     "good":"bien",
     "lord":"seigneur",
     "snow":"neige",
-    }
-    ],
-    italian : [
+    },
+    
+    italian :
     {
     "merry":"buon",
     "christmas":"natale",
@@ -47,38 +41,29 @@ const words = {
     "good":"bueno",
     "lord":"signore",
     "snow":"la neve",
-    }
-    ]        
+    }  
 }
 
+const divHtml = () => {
+    const elmnt = document.createElement("p");
+    elmnt.setAttribute("id","dom2")
+    const item = document.getElementById("dom");
+    item.replaceChild(elmnt, item.childNodes[0]);
+};
 
 document.getElementById("SPANISH").addEventListener("click", function(){
-    var elmnt = document.createElement("p");
-    elmnt.setAttribute("id","dom2")
-    var item = document.getElementById("dom");
-    item.replaceChild(elmnt, item.childNodes[0]);
-    let x = document.getElementById("inText").value;
-    return printToDom(x, "dom2")
+    divHtml();
+        let language = '' ;
+        newLang = [];
+        let x_input = document.getElementById("inText").value; 
+        x_input = x_input.toLowerCase();
+        let x_Array = x_input.split(" ");
+            for (var i=0;i<x_Array.length;i++) {
+                newLang.push(words["spanish"][x_Array[i]]);
+            }
+            newLang = newLang.toString();
+            newLang = newLang.replace(/,/g, ' ');
+            newLang = newLang.charAt(0).toUpperCase() + newLang.slice(1) + ".";
+    return printToDom(newLang, "dom2")
 });
 
-
-
-// let translate = () => {
-//     console.log('sdf');
-//     var text_fun = document.getElementById("inText").value;
-    
-//     return printToDom(text_fun, 'print_dom');
-//   }
-
-
-//   let content = document.getElementById("");
-//   let button = document.getElementById("");
-
-//   button.onclick = function() {
-      
-//         if(content.className == "open"){
-//             //do something
-//         }else{
-//             //do something else
-//         }
-//   };
