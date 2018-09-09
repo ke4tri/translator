@@ -9,8 +9,8 @@ const printToDom = (stringToPrint, divId) => {
 //     return word3
 // };
 
-const words = {
-    spanish : [
+// const words = {
+    spanish = 
     {
     "merry":"alegre",
     "christmas":"navida",
@@ -22,8 +22,8 @@ const words = {
     "lord":"dio",
     "snow":"nieve",
     }
-    ],
-    french : [
+    
+    french = 
     {
     "merry":"joyeux",
     "christmas":"noel",
@@ -35,8 +35,8 @@ const words = {
     "lord":"seigneur",
     "snow":"neige",
     }
-    ],
-    italian : [
+    
+    italian =
     {
     "merry":"buon",
     "christmas":"natale",
@@ -48,37 +48,44 @@ const words = {
     "lord":"signore",
     "snow":"la neve",
     }
-    ]        
-}
+           
+// }
 
+//SET UP THE BELOW FOR THE OTHER TWO LANGS TOO
+
+
+const divHtml = () => {
+    const elmnt = document.createElement("p");
+    elmnt.setAttribute("id","dom2")
+    const item = document.getElementById("dom");
+    item.replaceChild(elmnt, item.childNodes[0]);
+};
 
 document.getElementById("SPANISH").addEventListener("click", function(){
-    var elmnt = document.createElement("p");
-    elmnt.setAttribute("id","dom2")
-    var item = document.getElementById("dom");
-    item.replaceChild(elmnt, item.childNodes[0]);
-    let x = document.getElementById("inText").value;
+
+
+    divHtml();
+
+        const x = document.getElementById("inText").value; 
+        const xArraySplit = x.split(" ");
+
+        for (var i = 0; i < xArraySplit.length; i++){
+            newArray.push(xArraySplit[i]);
+        };
+  
+            
+        
+        
+             
     return printToDom(x, "dom2")
+    
 });
 
+// https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_text_get
+// not sure why this way seems so much easier than what I did above
+// but also uses the onclick instead of the addEventListener
 
-
-// let translate = () => {
-//     console.log('sdf');
-//     var text_fun = document.getElementById("inText").value;
+// if(xArraySplit[i] == words.spanish[0]){
+//     y =  words.spanish[0].i;
     
-//     return printToDom(text_fun, 'print_dom');
-//   }
-
-
-//   let content = document.getElementById("");
-//   let button = document.getElementById("");
-
-//   button.onclick = function() {
-      
-//         if(content.className == "open"){
-//             //do something
-//         }else{
-//             //do something else
-//         }
-//   };
+// }
