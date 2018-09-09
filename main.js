@@ -3,14 +3,8 @@ const printToDom = (stringToPrint, divId) => {
     selectedDiv.innerHTML += stringToPrint;
 };
 
-// was going to use this as a way to change the color of ART but cannot put it in its on class this way
-// let concat_word = (word1,word2) => {
-//     let word3 = `${word1}+${word2}`;
-//     return word3
-// };
-
-// const words = {
-    spanish = 
+const words = {
+    spanish : 
     {
     "merry":"alegre",
     "christmas":"navida",
@@ -21,9 +15,9 @@ const printToDom = (stringToPrint, divId) => {
     "good":"bueno",
     "lord":"dio",
     "snow":"nieve",
-    }
-    
-    french = 
+    },
+
+    french :
     {
     "merry":"joyeux",
     "christmas":"noel",
@@ -34,9 +28,9 @@ const printToDom = (stringToPrint, divId) => {
     "good":"bien",
     "lord":"seigneur",
     "snow":"neige",
-    }
+    },
     
-    italian =
+    italian :
     {
     "merry":"buon",
     "christmas":"natale",
@@ -49,10 +43,7 @@ const printToDom = (stringToPrint, divId) => {
     "snow":"la neve",
     }
            
-// }
-
-//SET UP THE BELOW FOR THE OTHER TWO LANGS TOO
-
+}
 
 const divHtml = () => {
     const elmnt = document.createElement("p");
@@ -63,29 +54,17 @@ const divHtml = () => {
 
 document.getElementById("SPANISH").addEventListener("click", function(){
 
-
     divHtml();
+        let language = '' ;
+        newLang = [];
+        let x_input = document.getElementById("inText").value; 
+        x_input = x_input.toLowerCase();
+        let x_Array = x_input.split(" ");
+            for (var i=0;i<x_Array.length;i++) {
+                newLang.push(words["spanish"][x_Array[i]]);
 
-        const x = document.getElementById("inText").value; 
-        const xArraySplit = x.split(" ");
-
-        for (var i = 0; i < xArraySplit.length; i++){
-            newArray.push(xArraySplit[i]);
-        };
-  
-            
-        
-        
-             
+            }
     return printToDom(x, "dom2")
     
 });
 
-// https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_text_get
-// not sure why this way seems so much easier than what I did above
-// but also uses the onclick instead of the addEventListener
-
-// if(xArraySplit[i] == words.spanish[0]){
-//     y =  words.spanish[0].i;
-    
-// }
