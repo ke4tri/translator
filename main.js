@@ -51,53 +51,30 @@ const divHtml = () => {
     item.replaceChild(elmnt, item.childNodes[0]);
 };
 
+let translate = (language1) => {
+        divHtml();
+            let language = '' ;
+            newLang = [];
+            let x_input = document.getElementById("inText").value; 
+            x_input = x_input.toLowerCase();
+            let x_Array = x_input.split(" ");
+                for (var i=0;i<x_Array.length;i++) {
+                    newLang.push(words[language1][x_Array[i]]);
+                }
+                newLang = newLang.toString();
+                newLang = newLang.replace(/,/g, ' ');
+                newLang = newLang.charAt(0).toUpperCase() + newLang.slice(1) + ".";
+        return printToDom(newLang, "dom2")
+    
+};
 document.getElementById("SPANISH").addEventListener("click", function(){
-    divHtml();
-        let language = '' ;
-        newLang = [];
-        let x_input = document.getElementById("inText").value; 
-        x_input = x_input.toLowerCase();
-        let x_Array = x_input.split(" ");
-            for (var i=0;i<x_Array.length;i++) {
-                newLang.push(words["spanish"][x_Array[i]]);
-            }
-            newLang = newLang.toString();
-            newLang = newLang.replace(/,/g, ' ');
-            newLang = newLang.charAt(0).toUpperCase() + newLang.slice(1) + ".";
-    return printToDom(newLang, "dom2")
-});
-
-document.getElementById("ITALIAN").addEventListener("click", function(){
-    divHtml();
-        let language = '' ;
-        newLang = [];
-        let x_input = document.getElementById("inText").value; 
-        x_input = x_input.toLowerCase();
-        let x_Array = x_input.split(" ");
-            for (var i=0;i<x_Array.length;i++) {
-                newLang.push(words["italian"][x_Array[i]]);
-            }
-            newLang = newLang.toString();
-            newLang = newLang.replace(/,/g, ' ');
-            newLang = newLang.charAt(0).toUpperCase() + newLang.slice(1) + ".";
-    return printToDom(newLang, "dom2")
+    translate("spanish");
 });
 
 document.getElementById("FRENCH").addEventListener("click", function(){
-    divHtml();
-        let language = '' ;
-        newLang = [];
-        let x_input = document.getElementById("inText").value; 
-        x_input = x_input.toLowerCase();
-        let x_Array = x_input.split(" ");
-            for (var i=0;i<x_Array.length;i++) {
-                newLang.push(words["french"][x_Array[i]]);
-            }
-            newLang = newLang.toString();
-            newLang = newLang.replace(/,/g, ' ');
-            newLang = newLang.charAt(0).toUpperCase() + newLang.slice(1) + ".";
-    return printToDom(newLang, "dom2")
+    translate("french");
 });
 
-
-
+document.getElementById("ITALIAN").addEventListener("click", function(){
+    translate("italian");
+});
