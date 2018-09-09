@@ -41,8 +41,7 @@ const words = {
     "good":"bueno",
     "lord":"signore",
     "snow":"la neve",
-    }
-           
+    }  
 }
 
 const divHtml = () => {
@@ -53,7 +52,6 @@ const divHtml = () => {
 };
 
 document.getElementById("SPANISH").addEventListener("click", function(){
-
     divHtml();
         let language = '' ;
         newLang = [];
@@ -62,9 +60,10 @@ document.getElementById("SPANISH").addEventListener("click", function(){
         let x_Array = x_input.split(" ");
             for (var i=0;i<x_Array.length;i++) {
                 newLang.push(words["spanish"][x_Array[i]]);
-
             }
-    return printToDom(x, "dom2")
-    
+            newLang = newLang.toString();
+            newLang = newLang.replace(/,/g, ' ');
+            newLang = newLang.charAt(0).toUpperCase() + newLang.slice(1) + ".";
+    return printToDom(newLang, "dom2")
 });
 
