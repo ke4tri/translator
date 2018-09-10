@@ -18,7 +18,6 @@ const words = {
     "santa":"Santa",
     "have":"tener",
     },
-
     french :
     {
     "merry":"joyeux",
@@ -34,7 +33,6 @@ const words = {
     "santa":"Père Noël",
     "have":"avoir",
     },
-    
     italian :
     {
     "merry":"buon",
@@ -68,17 +66,16 @@ let translate = (language1) => {
             let x_Array = x_input.split(" ");
                 for (var i=0;i<x_Array.length;i++) {
                   let move =  newLang.push(words[language1][x_Array[i]]);
-                    // if(move === undefined) {
-                    //     console.log("Something was undefined");
-                    // };
-
+                    if(x_Array[i] in words[language1] === false){
+                        alert("You may have not used the correct wording");
+                    };
                 }
                 newLang = newLang.toString();
                 newLang = newLang.replace(/,/g, ' ');
                 newLang = newLang.charAt(0).toUpperCase() + newLang.slice(1) ;
         return printToDom(newLang, "dom2")
-    
 };
+
 document.getElementById("SPANISH").addEventListener("click", function(){
     translate("spanish");
 });
@@ -91,7 +88,7 @@ document.getElementById("ITALIAN").addEventListener("click", function(){
     translate("italian");
 });
 
-document.getElementById("LUCKY?").addEventListener("click", function(){
+document.getElementById("LUCKY").addEventListener("click", function(){
     let langs = ['spanish','french','italian'];
     let ranNum = Math.floor((Math.random() * 3) + 0);
     let pause = '';
