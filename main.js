@@ -73,6 +73,8 @@ let translate = (language1) => {
                 newLang = newLang.toString();
                 newLang = newLang.replace(/,/g, ' ');
                 newLang = newLang.charAt(0).toUpperCase() + newLang.slice(1) ;
+                // BELOW TO LINES OF CODE ARE THE TEXT TO SPEECH. 
+                //http://www.lingoes.net/en/translator/langcode.htm use for the dialect
                 var msg = new SpeechSynthesisUtterance(newLang);
                 window.speechSynthesis.speak(msg);
         return printToDom(newLang, "dom2")
