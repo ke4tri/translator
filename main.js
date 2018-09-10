@@ -67,7 +67,11 @@ let translate = (language1) => {
             x_input = x_input.toLowerCase();
             let x_Array = x_input.split(" ");
                 for (var i=0;i<x_Array.length;i++) {
-                    newLang.push(words[language1][x_Array[i]]);
+                  let move =  newLang.push(words[language1][x_Array[i]]);
+                    // if(move === undefined) {
+                    //     console.log("Something was undefined");
+                    // };
+
                 }
                 newLang = newLang.toString();
                 newLang = newLang.replace(/,/g, ' ');
@@ -85,4 +89,11 @@ document.getElementById("FRENCH").addEventListener("click", function(){
 
 document.getElementById("ITALIAN").addEventListener("click", function(){
     translate("italian");
+});
+
+document.getElementById("LUCKY?").addEventListener("click", function(){
+    let langs = ['spanish','french','italian'];
+    let ranNum = Math.floor((Math.random() * 3) + 0);
+    let pause = '';
+    translate(langs[ranNum]);
 });
