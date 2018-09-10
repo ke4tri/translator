@@ -15,12 +15,14 @@ const words = {
     "good":"bueno",
     "lord":"dio",
     "snow":"nieve",
+    "santa":"Santa",
+    "have":"tener",
     },
 
     french :
     {
     "merry":"joyeux",
-    "christmas":"noel",
+    "christmas":"Noel",
     "and":"et",
     "happy":"content",
     "new":"nouveau",
@@ -28,6 +30,9 @@ const words = {
     "good":"bien",
     "lord":"seigneur",
     "snow":"neige",
+    "tree":"arbre",
+    "santa":"Père Noël",
+    "have":"avoir",
     },
     
     italian :
@@ -41,6 +46,9 @@ const words = {
     "good":"bueno",
     "lord":"signore",
     "snow":"la neve",
+    "tree":"albero",
+    "santa":"Santa",
+    "have":"avere",
     }  
 }
 
@@ -63,7 +71,7 @@ let translate = (language1) => {
                 }
                 newLang = newLang.toString();
                 newLang = newLang.replace(/,/g, ' ');
-                newLang = newLang.charAt(0).toUpperCase() + newLang.slice(1) + ".";
+                newLang = newLang.charAt(0).toUpperCase() + newLang.slice(1) ;
         return printToDom(newLang, "dom2")
     
 };
