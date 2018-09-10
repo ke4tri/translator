@@ -33,7 +33,7 @@ localhost:9999
 #
 #
 
-![Mobile screenshot](/images/Translator2.jpg)
+![Mobile screenshot](https://github.com/ke4tri/translator/blob/master/images/Translator2.JPG)
 ## Mobile
 #
 #
