@@ -73,7 +73,10 @@ let translate = (language1) => {
                 newLang = newLang.toString();
                 newLang = newLang.replace(/,/g, ' ');
                 newLang = newLang.charAt(0).toUpperCase() + newLang.slice(1) ;
+                var msg = new SpeechSynthesisUtterance(newLang);
+                window.speechSynthesis.speak(msg);
         return printToDom(newLang, "dom2")
+        
 };
 
 document.getElementById("SPANISH").addEventListener("click", function(){
@@ -94,3 +97,4 @@ document.getElementById("LUCKY").addEventListener("click", function(){
     let pause = '';
     translate(langs[ranNum]);
 });
+
