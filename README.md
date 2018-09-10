@@ -28,7 +28,7 @@ localhost:9999
 ## Screenshots
 
 
-![Main screenshot](/images/Translator.jpg )
+![Main screenshot](https://github.com/ke4tri/translator/blob/master/images/Translator.JPG )
 ## Desktop
 #
 #
