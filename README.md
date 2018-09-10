@@ -28,12 +28,12 @@ localhost:9999
 ## Screenshots
 
 
-![Main screenshot](Translator.jpg)
+![Main screenshot](images/Translator.jpg)
 ## Desktop
 #
 #
 
-![Mobile screenshot](Translator2.jpg)
+![Mobile screenshot](images/Translator2.jpg)
 ## Mobile
 #
 #
