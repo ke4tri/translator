@@ -2,7 +2,6 @@ const printToDom = (stringToPrint, divId) => {
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML += stringToPrint;
 };
-
 const words = {
     spanish : 
     {
@@ -49,14 +48,12 @@ const words = {
     "have":"avere",
     }  
 }
-
 const divHtml = () => {
     const elmnt = document.createElement("p");
     elmnt.setAttribute("id","dom2")
     const item = document.getElementById("dom");
     item.replaceChild(elmnt, item.childNodes[0]);
 };
-
 let translate = (language1) => {
         divHtml();
             let language = '' ;
@@ -78,21 +75,17 @@ let translate = (language1) => {
                 var msg = new SpeechSynthesisUtterance(newLang);
                 window.speechSynthesis.speak(msg);
         return printToDom(newLang, "dom2")
-        
 };
 
 document.getElementById("SPANISH").addEventListener("click", function(){
     translate("spanish");
 });
-
 document.getElementById("FRENCH").addEventListener("click", function(){
     translate("french");
 });
-
 document.getElementById("ITALIAN").addEventListener("click", function(){
     translate("italian");
 });
-
 document.getElementById("LUCKY").addEventListener("click", function(){
     let langs = ['spanish','french','italian'];
     let ranNum = Math.floor((Math.random() * 3) + 0);
