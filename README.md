@@ -1,6 +1,7 @@
 # Translator
 
-# 
+# Discription
+## Online translator of small Christmas phrases with in 3 selected languages. Translator also reads phrase out in that respective language. 
 
 
 
